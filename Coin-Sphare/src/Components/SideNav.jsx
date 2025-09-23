@@ -1,82 +1,95 @@
-import {
-  Heading,
-  HStack,
-  Icon,
-  Link,
-  Stack,
-  Text,
-  Box,
-} from "@chakra-ui/react";
-import { RiDashboardHorizontalFill } from "react-icons/ri";
-import { LuArrowDownUp } from "react-icons/lu";
+import { Box, HStack, Heading, Icon, Stack, Text } from "@chakra-ui/react";
+import { RxDashboard } from "react-icons/rx";
+import { BsArrowDownUp } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
-export default function SideNav() {
-  const navlinks = [
+import { Link, useLocation } from "react-router-dom";
+const Sidenav = () => {
+  const location = useLocation();
+
+  console.log(location);
+
+  const isActiveLink = (link) => {
+    return location.pathname === link;
+  };
+
+  const navLinks = [
     {
-      icon: RiDashboardHorizontalFill,
+      icon: RxDashboard,
       text: "Dashboard",
-      Link: "/",
+      link: "/",
     },
     {
-      icon: LuArrowDownUp,
-      text: "Transaction",
-      Link: "/Transaction",
+      icon: BsArrowDownUp,
+      text: "Transactions",
+      link: "/transactions",
     },
   ];
+
   return (
-    <>
-      <Stack
-        boxShadow="lg"
-        maxW="16rem"
-        h="100vh"
-        bg="gray"
-        justifyContent="space-between"
-      >
-        <Box>
-          <Heading
-            color="rgba(95, 0, 217, 1)"
-            textAlign="center"
-            marginTop="30px"
-            fontSize="20px"
-            as="h1"
-            pt="3"
-          >
-            Coin Sphare
-          </Heading>
-          <Box mt="6" mx="3">
-            {navlinks.map((nav, index) => (
+    <Stack
+      bg="white"
+      justify="space-between"
+      boxShadow={{
+        base: "none",
+        lg: "lg",
+      }}
+      w={{
+        base: "full",
+        lg: "16rem",
+      }}
+      h="100vh"
+    >
+      <Box>
+        <Heading textAlign="center" fontSize="20px" as="h1" pt="3.5rem">
+          @DOSOMECODING
+        </Heading>
+        <Box mt="6" mx="3">
+          {navLinks.map((nav) => (
+            <Link to={nav.link} key={nav.text}>
               <HStack
+                bg={isActiveLink(nav.link) ? "#F3F3F7" : "transparent"}
+                color={isActiveLink(nav.link) ? "#171717" : "#797E82"}
                 borderRadius="10px"
-                mx="3"
-                key={index}
                 py="3"
                 px="4"
                 _hover={{
-                  bg: "#f3f3f7",
+                  bg: "#F3F3F7",
+                  color: "#171717",
                 }}
+                color="#797E82"
               >
-                <Icon as={nav.icon}></Icon>
-                <Text>{nav.text}</Text>
+                <Icon as={nav.icon} />
+                <Text fontSize="14px" fontWeight="medium">
+                  {nav.text}
+                </Text>
               </HStack>
-            ))}
-          </Box>
+            </Link>
+          ))}
         </Box>
+      </Box>
 
-        <Box mt="6" mx="3" display="flex">
+      <Box mt="6" mx="3" mb="6">
+        <Link to="/support">
           <HStack
             borderRadius="10px"
-            mx="3"
             py="3"
             px="4"
+            bg={isActiveLink("/support") ? "#F3F3F7" : "transparent"}
+            color={isActiveLink("/support") ? "#171717" : "#797E82"}
             _hover={{
-              bg: "#f3f3f7",
+              bg: "#F3F3F7",
+              color: "#171717",
             }}
           >
-            <Icon as={BiSupport}></Icon>
-            <Text> Support</Text>
+            <Icon as={BiSupport} />
+            <Text fontSize="14px" fontWeight="medium">
+              Support
+            </Text>
           </HStack>
-        </Box>
-      </Stack>
-    </>
+        </Link>
+      </Box>
+    </Stack>
   );
-}
+};
+
+export default Sidenav;

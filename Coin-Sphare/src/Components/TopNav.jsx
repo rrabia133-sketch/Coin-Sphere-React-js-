@@ -1,43 +1,45 @@
 import {
+  Box,
+  Button,
   Container,
   Flex,
+  HStack,
   Heading,
-  Menu,
-  Button,
-  Portal,
   Icon,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
 } from "@chakra-ui/react";
-import { FaUserCircle } from "react-icons/fa";
-
-export default function TopNav() {
+import { FaBars, FaUserTie } from "react-icons/fa";
+const TopNav = ({ title, onOpen }) => {
   return (
-    <Flex boxShadow="xl" h="100px">
-      <Container
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-      >
-        <Heading>DashBoard</Heading>
+    <Box px="4" bg="white">
+      <HStack maxW="70rem" h="16" justify="space-between" mx="auto">
+        <Icon
+          as={FaBars}
+          onClick={onOpen}
+          display={{
+            base: "block",
+            lg: "none",
+          }}
+        />
+        <Heading fontWeight="medium" fontSize="28px">
+          {title}
+        </Heading>
 
-        <Menu.Root positioning={{ placement: "right-start" }}>
-          <Menu.Trigger asChild>
-            <Button variant="plain" size="xl">
-              <Icon as={FaUserCircle} fontSize="24px" />
-            </Button>
-          </Menu.Trigger>
-          <Portal>
-            <Menu.Positioner>
-              <Menu.Content>
-                <Menu.Item value="new-txt">New Text File</Menu.Item>
-                <Menu.Item value="new-file">New File...</Menu.Item>
-                <Menu.Item value="new-win">New Window</Menu.Item>
-                <Menu.Item value="open-file">Open File...</Menu.Item>
-                <Menu.Item value="export">Export</Menu.Item>
-              </Menu.Content>
-            </Menu.Positioner>
-          </Portal>
-        </Menu.Root>
-      </Container>
-    </Flex>
+        <Menu>
+          <MenuButton>
+            <Icon as={FaUserTie} fontSize="24px" />
+          </MenuButton>
+          <MenuList>
+            <MenuItem>Logout</MenuItem>
+            <MenuItem>Support</MenuItem>
+          </MenuList>
+        </Menu>
+      </HStack>
+    </Box>
   );
-}
+};
+
+export default TopNav;
