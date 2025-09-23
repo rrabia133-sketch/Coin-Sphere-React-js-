@@ -25,35 +25,44 @@ export default function SideNav() {
   ];
   return (
     <>
-      <Stack boxShadow="sm" maxW="16rem" h="100vh" bg="gray">
-        <Heading
-          textAlign="center"
-          marginTop="30px"
-          fontSize="20px"
-          as="h1"
-          pt="3"
-        >
-          Coin Sphare
-        </Heading>
-        <Box mt="6" mx="3">
-          {navlinks.map((nav, index) => (
-            <HStack
-              borderRadius="10px"
-              mx="3"
-              key={index}
-              py="3"
-              px="4"
-              _hover={{
-                bg: "#f3f3f7",
-              }}
-            >
-              <Icon as={nav.icon}></Icon>
-              <Text>{nav.text}</Text>
-            </HStack>
-          ))}
+      <Stack
+        boxShadow="lg"
+        maxW="16rem"
+        h="100vh"
+        bg="gray"
+        justifyContent="space-between"
+      >
+        <Box>
+          <Heading
+            color="rgba(95, 0, 217, 1)"
+            textAlign="center"
+            marginTop="30px"
+            fontSize="20px"
+            as="h1"
+            pt="3"
+          >
+            Coin Sphare
+          </Heading>
+          <Box mt="6" mx="3">
+            {navlinks.map((nav, index) => (
+              <HStack
+                borderRadius="10px"
+                mx="3"
+                key={index}
+                py="3"
+                px="4"
+                _hover={{
+                  bg: "#f3f3f7",
+                }}
+              >
+                <Icon as={nav.icon}></Icon>
+                <Text>{nav.text}</Text>
+              </HStack>
+            ))}
+          </Box>
         </Box>
 
-        <Box mt="6" mx="3">
+        <Box mt="6" mx="3" display="flex">
           <HStack
             borderRadius="10px"
             mx="3"
