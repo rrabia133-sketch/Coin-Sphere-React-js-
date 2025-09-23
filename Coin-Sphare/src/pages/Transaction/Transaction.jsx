@@ -37,9 +37,9 @@ const TransactionPage = () => {
   return (
     <DashboardLayout title="Transactions">
       <Flex justify="end" mt="6" mb="3">
-        <Button leftIcon={<Icon as={AiOutlineDownload} />}>Export CSV</Button>
+        <Button leftIcon={<Icon as={AiOutlineDownload} />} bg="yellow" color="black" _hover={{ bg: "yellow.600" }}>Export CSV</Button>
       </Flex>
-      <Card borderRadius="1rem">
+      <Card borderRadius="1rem" bg="black" border="1px solid" borderColor="yellow">
         <Tabs>
           <TabList
             pt="4"
@@ -49,9 +49,9 @@ const TransactionPage = () => {
           >
             <HStack>
               {tabs.map((tab) => (
-                <Tab key={tab.name} display="flex" gap="2" pb="4">
+                <Tab key={tab.name} display="flex" gap="2" pb="4" color="yellow" _selected={{ color: "black", bg: "yellow" }}>
                   {tab.name}{" "}
-                  <Tag colorScheme="gray" borderRadius="full">
+                  <Tag bg="yellow" color="black" borderRadius="full">
                     {tab.count}
                   </Tag>
                 </Tab>
@@ -60,9 +60,9 @@ const TransactionPage = () => {
 
             <InputGroup maxW="200px" pr="6">
               <InputLeftElement pointerEvents="none">
-                <Icon as={BsSearch} />
+                <Icon as={BsSearch} color="yellow" />
               </InputLeftElement>
-              <Input type="tel" placeholder="Search..." />
+              <Input type="tel" placeholder="Search..." bg="black" borderColor="yellow" color="yellow" _placeholder={{ color: "gray.400" }} />
             </InputGroup>
           </TabList>
 

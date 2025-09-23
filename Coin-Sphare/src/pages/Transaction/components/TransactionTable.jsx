@@ -89,28 +89,28 @@ const TransactionTable = () => {
 
   return (
     <TableContainer>
-      <Table variant="simple" colorScheme="gray">
+      <Table variant="simple" colorScheme="yellow">
         <Thead>
           <Tr>
-            <Th>ID</Th>
-            <Th>Date & Time</Th>
-            <Th>Type</Th>
-            <Th>Amount</Th>
-            <Th>Status</Th>
+            <Th color="yellow">ID</Th>
+            <Th color="yellow">Date & Time</Th>
+            <Th color="yellow">Type</Th>
+            <Th color="yellow">Amount</Th>
+            <Th color="yellow">Status</Th>
           </Tr>
         </Thead>
-        <Tbody color="p.black">
+        <Tbody color="yellow">
           {tableData.map((data) => (
             <Tr key={data.id}>
-              <Td fontSize="sm" fontWeight="medium">
+              <Td fontSize="sm" fontWeight="medium" color="yellow">
                 {data.id}
               </Td>
               <Td>
                 <Stack spacing={0}>
-                  <Text fontSize="sm" fontWeight="medium">
+                  <Text fontSize="sm" fontWeight="medium" color="yellow">
                     {data.date}
                   </Text>
-                  <Text fontSize="xs" color="black.60">
+                  <Text fontSize="xs" color="gray.400">
                     {data.time}
                   </Text>
                 </Stack>
@@ -118,15 +118,15 @@ const TransactionTable = () => {
               <Td>
                 {" "}
                 <Stack spacing={0}>
-                  <Text fontSize="sm" fontWeight="medium">
+                  <Text fontSize="sm" fontWeight="medium" color="yellow">
                     {data.type.name}
                   </Text>
-                  <Text fontSize="xs" color="black.60">
+                  <Text fontSize="xs" color="gray.400">
                     {data.type?.tag}
                   </Text>
                 </Stack>
               </Td>
-              <Td fontSize="sm" fontWeight="medium">
+              <Td fontSize="sm" fontWeight="medium" color="yellow">
                 {data.amount}
               </Td>
               <Td fontSize="sm" fontWeight="medium">

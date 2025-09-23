@@ -40,7 +40,7 @@ const Transactions = () => {
 
   return (
     <CustomCard h="full">
-      <Text mb="6" fontSize="sm" color="black.80">
+      <Text mb="6" fontSize="sm" color="yellow">
         Recent Transactions
       </Text>
       <Stack spacing={4}>
@@ -50,26 +50,26 @@ const Transactions = () => {
             <Flex gap="4">
               <Grid
                 placeItems="center"
-                bg="black.5"
+                bg="yellow"
                 boxSize={10}
                 borderRadius="full"
               >
-                <Icon as={transaction.icon} />
+                <Icon as={transaction.icon} color="black" />
               </Grid>
               <Flex justify="space-between" w="full">
                 <Stack spacing={0}>
-                  <Text textStyle="h6">{transaction.text}</Text>
-                  <Text fontSize="sm" color="black.40">
+                  <Text textStyle="h6" color="yellow">{transaction.text}</Text>
+                  <Text fontSize="sm" color="gray.400">
                     {transaction.timestamp}
                   </Text>
                 </Stack>
-                <Text textStyle="h6">{transaction.amount}</Text>
+                <Text textStyle="h6" color="yellow">{transaction.amount}</Text>
               </Flex>
             </Flex>
           </Fragment>
         ))}
       </Stack>
-      <Button w="full" mt="6" colorScheme="gray">
+      <Button w="full" mt="6" bg="yellow" color="black" _hover={{ bg: "yellow.600" }}>
         View All
       </Button>
     </CustomCard>

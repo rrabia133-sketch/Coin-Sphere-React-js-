@@ -27,7 +27,7 @@ const Sidenav = () => {
 
   return (
     <Stack
-      bg="white"
+      bg="black"
       justify="space-between"
       boxShadow={{
         base: "none",
@@ -40,23 +40,22 @@ const Sidenav = () => {
       h="100vh"
     >
       <Box>
-        <Heading textAlign="center" fontSize="20px" as="h1" pt="3.5rem">
+        <Heading textAlign="center" fontSize="20px" as="h1" pt="3.5rem" color="yellow">
           Coin Sphare
         </Heading>
         <Box mt="6" mx="3">
           {navLinks.map((nav) => (
             <Link to={nav.link} key={nav.text}>
               <HStack
-                bg={isActiveLink(nav.link) ? "#F3F3F7" : "transparent"}
-                color={isActiveLink(nav.link) ? "#171717" : "#797E82"}
+                bg={isActiveLink(nav.link) ? "yellow" : "transparent"}
+                color={isActiveLink(nav.link) ? "black" : "gray.400"}
                 borderRadius="10px"
                 py="3"
                 px="4"
                 _hover={{
-                  bg: "#F3F3F7",
-                  color: "#171717",
+                  bg: "yellow",
+                  color: "black",
                 }}
-                color="#797E82"
               >
                 <Icon as={nav.icon} />
                 <Text fontSize="14px" fontWeight="medium">
@@ -74,11 +73,11 @@ const Sidenav = () => {
             borderRadius="10px"
             py="3"
             px="4"
-            bg={isActiveLink("/support") ? "#F3F3F7" : "transparent"}
-            color={isActiveLink("/support") ? "#171717" : "#797E82"}
+            bg={isActiveLink("/support") ? "yellow" : "transparent"}
+            color={isActiveLink("/support") ? "black" : "gray.400"}
             _hover={{
-              bg: "#F3F3F7",
-              color: "#171717",
+              bg: "yellow",
+              color: "black",
             }}
           >
             <Icon as={BiSupport} />

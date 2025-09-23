@@ -23,7 +23,7 @@ const PriceSection = () => {
     <CustomCard>
       <Flex justify="space-between" align="start">
         <Stack>
-          <HStack color="black.80">
+          <HStack color="yellow">
             <Text fontSize="sm">Wallet Balances</Text>
           </HStack>
           <HStack
@@ -38,10 +38,10 @@ const PriceSection = () => {
             }}
           >
             <HStack>
-              <Text textStyle="h2" fontWeight="medium">
+              <Text textStyle="h2" fontWeight="medium" color="yellow">
                 22.39401000
               </Text>{" "}
-              <HStack fontWeight="medium" color="green.500">
+              <HStack fontWeight="medium" color="green.400">
                 <Icon as={BsArrowUpRight} />
                 <Text fontSize="sm" fontWeight="medium">
                   22%
@@ -51,16 +51,17 @@ const PriceSection = () => {
           </HStack>
         </Stack>
         <HStack>
-          <Button leftIcon={<Icon as={AiFillPlusCircle} />}>Buy</Button>
-          <Button leftIcon={<Icon as={AiOutlineMinusCircle} />}>Sell</Button>
+          <Button leftIcon={<Icon as={AiFillPlusCircle} />} bg="yellow" color="black" _hover={{ bg: "yellow.600" }}>Buy</Button>
+          <Button leftIcon={<Icon as={AiOutlineMinusCircle} />} bg="yellow" color="black" _hover={{ bg: "yellow.600" }}>Sell</Button>
         </HStack>
       </Flex>
       <Tabs variant="soft-rounded">
         <Flex justify="end">
-          <TabList bg="black.5" p="3px">
+          <TabList bg="black.10" p="3px">
             {["1H", "1D", "1W", "1M"].map((tab) => (
               <Tab
-                _selected={{ bg: "white" }}
+                _selected={{ bg: "yellow", color: "black" }}
+                color="yellow"
                 key={tab}
                 fontSize="sm"
                 p="6px"
@@ -76,7 +77,7 @@ const PriceSection = () => {
             <Image w="100%" src="/graph.svg" mt="3rem" />
             <HStack justify="space-between">
               {timestamps.map((timestamp) => (
-                <Text key={timestamp} fontSize="sm" color="black.80">
+                <Text key={timestamp} fontSize="sm" color="yellow">
                   {timestamp}
                 </Text>
               ))}

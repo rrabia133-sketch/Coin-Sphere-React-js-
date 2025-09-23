@@ -3,20 +3,21 @@ import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 export const theme = extendTheme(
   {
     colors: {
-      purple: {
-        500: "#5F00D9",
+      yellow: {
+        500: "#FFD700",
       },
       p: {
-        purple: "#5F00D9",
-        black: "#171717",
+        yellow: "#FFD700",
+        black: "#000000",
+        white: "#FFFFFF",
       },
       black: {
-        5: "#F3F3F7",
-        10: "#EEEEF4",
-        20: "#D8DDE2",
-        40: "#BABAC4",
-        60: "#797E82",
-        80: "#535D66",
+        5: "#1A1A1A",
+        10: "#2D2D2D",
+        20: "#404040",
+        40: "#666666",
+        60: "#999999",
+        80: "#CCCCCC",
       },
     },
     fonts: {
@@ -29,7 +30,7 @@ export const theme = extendTheme(
           base: "30px",
           md: "32px",
         },
-        color: "p.black",
+        color: "p.white",
         lineHeight: {
           base: "34px",
           md: "36px",
@@ -40,7 +41,7 @@ export const theme = extendTheme(
           base: "24px",
           md: "28px",
         },
-        color: "p.black",
+        color: "p.white",
         lineHeight: { base: "28px", md: "32px" },
       },
 
@@ -50,7 +51,7 @@ export const theme = extendTheme(
           md: "24px",
           xl: "32px",
         },
-        color: "p.black",
+        color: "p.white",
 
         lineHeight: { base: "26px", md: "28px", xl: "36px" },
       },
@@ -60,7 +61,7 @@ export const theme = extendTheme(
           base: "20px",
           md: "22px",
         },
-        color: "p.black",
+        color: "p.white",
 
         lineHeight: { base: "24px", md: "26px" },
       },
@@ -69,7 +70,7 @@ export const theme = extendTheme(
           base: "18px",
           md: "20px",
         },
-        color: "p.black",
+        color: "p.white",
 
         lineHeight: { base: "22px", md: "24px" },
       },
@@ -78,7 +79,7 @@ export const theme = extendTheme(
           base: "16px",
           md: "18px",
         },
-        color: "p.black",
+        color: "p.white",
 
         lineHeight: { base: "20px", md: "22px" },
       },
@@ -98,7 +99,7 @@ export const theme = extendTheme(
       global: {
         // styles for the `body`
         body: {
-          bg: "#F3F3F7",
+          bg: "#000000",
         },
       },
     },
@@ -124,7 +125,7 @@ export const theme = extendTheme(
               fontSize: "sm",
               pb: "0",
               _focus: {
-                boxShadow: "0 0 0 1px #5F00D9",
+                boxShadow: "0 0 0 1px #FFD700",
               },
             },
           },
@@ -138,12 +139,12 @@ export const theme = extendTheme(
             fontSize: "sm",
 
             _focus: {
-              boxShadow: "0 0 0 1px #5F00D9",
+              boxShadow: "0 0 0 1px #FFD700",
             },
           },
         },
       },
     },
   },
-  withDefaultColorScheme({ colorScheme: "purple" })
+  withDefaultColorScheme({ colorScheme: "yellow" })
 );

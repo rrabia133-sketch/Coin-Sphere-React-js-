@@ -4,14 +4,14 @@ import { CustomCard } from "../../../chakra/CustomCard";
 const InfoCard = ({ imgUrl, text, tagText, inverted }) => {
   return (
     <CustomCard
-      bgColor={inverted ? "p.purple" : "white"}
+      bgColor={inverted ? "p.yellow" : "black"}
       bgImage={imgUrl}
       bgSize="cover"
       bgRepeat="no-repeat"
     >
       <Tag
-        color={inverted ? "p.purple" : "white"}
-        bg={inverted ? "white" : "p.purple"}
+        color={inverted ? "black" : "black"}
+        bg={inverted ? "black" : "yellow"}
         borderRadius="full"
       >
         {tagText}
@@ -20,7 +20,7 @@ const InfoCard = ({ imgUrl, text, tagText, inverted }) => {
         mt="4"
         fontWeight="medium"
         textStyle="h5"
-        color={inverted ? "white" : "black.80"}
+        color={inverted ? "black" : "yellow"}
       >
         {text}
       </Text>

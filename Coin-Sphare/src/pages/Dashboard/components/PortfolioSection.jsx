@@ -9,7 +9,9 @@ const PortfolioSection = () => {
   return (
     <HStack
       justify="space-between"
-      bg="white"
+      bg="black"
+      border="1px solid"
+      borderColor="yellow"
       borderRadius="xl"
       p="6"
       align={{
@@ -40,17 +42,17 @@ const PortfolioSection = () => {
         }}
       >
         <Stack>
-          <HStack color="black.80">
+          <HStack color="yellow">
             <Text fontSize="sm">Total Portfolio Value</Text>
             <Icon as={AiOutlineInfoCircle} />
           </HStack>
-          <Text textStyle="h2" fontWeight="medium">
+          <Text textStyle="h2" fontWeight="medium" color="yellow">
             ₹ 112,312.24
           </Text>
         </Stack>
 
         <Stack>
-          <HStack color="black.80">
+          <HStack color="yellow">
             <Text fontSize="sm">Wallet Balances</Text>
           </HStack>
           <HStack
@@ -65,26 +67,26 @@ const PortfolioSection = () => {
             }}
           >
             <HStack>
-              <Text textStyle="h2" fontWeight="medium">
+              <Text textStyle="h2" fontWeight="medium" color="yellow">
                 22.39401000
               </Text>{" "}
-              <Tag colorScheme="gray" fontWeight="medium">
+              <Tag bg="yellow" color="black" fontWeight="medium">
                 BTC
               </Tag>
             </HStack>
             <HStack>
-              <Text textStyle="h2" fontWeight="medium">
+              <Text textStyle="h2" fontWeight="medium" color="yellow">
                 ₹ 1,300.00
               </Text>{" "}
-              <Tag colorScheme="gray">INR</Tag>
+              <Tag bg="yellow" color="black">INR</Tag>
             </HStack>
           </HStack>
         </Stack>
       </HStack>
 
       <HStack>
-        <Button leftIcon={<Icon as={AiOutlineArrowDown} />}>Deposit</Button>
-        <Button leftIcon={<Icon as={AiOutlineArrowUp} />}>Withdraw</Button>
+        <Button leftIcon={<Icon as={AiOutlineArrowDown} />} bg="yellow" color="black" _hover={{ bg: "yellow.600" }}>Deposit</Button>
+        <Button leftIcon={<Icon as={AiOutlineArrowUp} />} bg="yellow" color="black" _hover={{ bg: "yellow.600" }}>Withdraw</Button>
       </HStack>
     </HStack>
   );
