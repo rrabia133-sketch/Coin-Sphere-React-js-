@@ -26,11 +26,11 @@ const SupportCard = ({ leftComponent, icon, title, text }) => {
       }}
     >
       <Stack maxW="24rem">
-        <Icon as={icon} boxSize={6} color="yellow" />
-        <Text fontWeight="medium" as="h1" textStyle="h1" color="yellow">
+        <Icon as={icon} boxSize={6} color="blue.500" />
+        <Text fontWeight="medium" as="h1" textStyle="h1" color="gray.600">
           {title}
         </Text>
-        <Text fontSize="sm" color="gray.400">
+        <Text fontSize="sm" color="gray.500">
           {text}
         </Text>
       </Stack>

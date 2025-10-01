@@ -14,28 +14,28 @@ import {
 import { FaBars, FaUserTie } from "react-icons/fa";
 const TopNav = ({ title, onOpen }) => {
   return (
-    <Box px="4" bg="black">
+    <Box px="4" bg="white" boxShadow="sm">
       <HStack maxW="70rem" h="16" justify="space-between" mx="auto">
         <Icon
           as={FaBars}
           onClick={onOpen}
-          color="yellow"
+          color="blue.500"
           display={{
             base: "block",
             lg: "none",
           }}
         />
-        <Heading fontWeight="medium" fontSize="28px" color="yellow">
+        <Heading fontWeight="medium" fontSize="28px" color="gray.600">
           {title}
         </Heading>
 
         <Menu>
           <MenuButton>
-            <Icon as={FaUserTie} fontSize="24px" color="yellow" />
+            <Icon as={FaUserTie} fontSize="24px" color="blue.500" />
           </MenuButton>
-          <MenuList bg="black" borderColor="yellow">
-            <MenuItem bg="black" color="yellow" _hover={{ bg: "yellow", color: "black" }}>Logout</MenuItem>
-            <MenuItem bg="black" color="yellow" _hover={{ bg: "yellow", color: "black" }}>Support</MenuItem>
+          <MenuList>
+            <MenuItem _hover={{ bg: "blue.50" }}>Logout</MenuItem>
+            <MenuItem _hover={{ bg: "blue.50" }}>Support</MenuItem>
           </MenuList>
         </Menu>
       </HStack>

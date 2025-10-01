@@ -3,21 +3,25 @@ import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 export const theme = extendTheme(
   {
     colors: {
-      yellow: {
-        500: "#FFD700",
+      blue: {
+        500: "#4169E1",
+        600: "#3A5FCD",
+        700: "#2E4BC7",
       },
       p: {
-        yellow: "#FFD700",
-        black: "#000000",
+        blue: "#4169E1",
+        darkBlue: "#2E4BC7",
         white: "#FFFFFF",
+        lightGray: "#F8F9FA",
       },
-      black: {
-        5: "#1A1A1A",
-        10: "#2D2D2D",
-        20: "#404040",
-        40: "#666666",
-        60: "#999999",
-        80: "#CCCCCC",
+      gray: {
+        50: "#F8F9FA",
+        100: "#E9ECEF",
+        200: "#DEE2E6",
+        300: "#CED4DA",
+        400: "#6C757D",
+        500: "#495057",
+        600: "#343A40",
       },
     },
     fonts: {
@@ -30,7 +34,7 @@ export const theme = extendTheme(
           base: "30px",
           md: "32px",
         },
-        color: "p.white",
+        color: "gray.600",
         lineHeight: {
           base: "34px",
           md: "36px",
@@ -41,7 +45,7 @@ export const theme = extendTheme(
           base: "24px",
           md: "28px",
         },
-        color: "p.white",
+        color: "gray.600",
         lineHeight: { base: "28px", md: "32px" },
       },
 
@@ -51,7 +55,7 @@ export const theme = extendTheme(
           md: "24px",
           xl: "32px",
         },
-        color: "p.white",
+        color: "gray.600",
 
         lineHeight: { base: "26px", md: "28px", xl: "36px" },
       },
@@ -61,7 +65,7 @@ export const theme = extendTheme(
           base: "20px",
           md: "22px",
         },
-        color: "p.white",
+        color: "gray.600",
 
         lineHeight: { base: "24px", md: "26px" },
       },
@@ -70,7 +74,7 @@ export const theme = extendTheme(
           base: "18px",
           md: "20px",
         },
-        color: "p.white",
+        color: "gray.600",
 
         lineHeight: { base: "22px", md: "24px" },
       },
@@ -79,7 +83,7 @@ export const theme = extendTheme(
           base: "16px",
           md: "18px",
         },
-        color: "p.white",
+        color: "gray.600",
 
         lineHeight: { base: "20px", md: "22px" },
       },
@@ -99,7 +103,7 @@ export const theme = extendTheme(
       global: {
         // styles for the `body`
         body: {
-          bg: "#000000",
+          bgGradient: "linear(to-br, #F8F9FA, #E3F2FD, #BBDEFB)",
         },
       },
     },
@@ -125,7 +129,7 @@ export const theme = extendTheme(
               fontSize: "sm",
               pb: "0",
               _focus: {
-                boxShadow: "0 0 0 1px #FFD700",
+                boxShadow: "0 0 0 1px #4169E1",
               },
             },
           },
@@ -139,12 +143,12 @@ export const theme = extendTheme(
             fontSize: "sm",
 
             _focus: {
-              boxShadow: "0 0 0 1px #FFD700",
+              boxShadow: "0 0 0 1px #4169E1",
             },
           },
         },
       },
     },
   },
-  withDefaultColorScheme({ colorScheme: "yellow" })
+  withDefaultColorScheme({ colorScheme: "blue" })
 );

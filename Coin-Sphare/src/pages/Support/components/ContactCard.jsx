@@ -15,9 +15,9 @@ import React from "react";
 
 const ContactCard = () => {
   return (
-    <Card p="6" borderRadius="1rem" bg="black" border="1px solid" borderColor="yellow">
+    <Card p="6" borderRadius="1rem" bg="white" boxShadow="md">
       <Stack spacing={6}>
-        <Text fontWeight="medium" fontSize="sm" color="yellow">
+        <Text fontWeight="medium" fontSize="sm" color="gray.600">
           You will receive response within 24 hours of time of submit.
         </Text>
 
@@ -28,34 +28,34 @@ const ContactCard = () => {
           }}
         >
           <FormControl>
-            <FormLabel color="yellow">Name</FormLabel>
-            <Input placeholder="Enter Your Name.." bg="black" borderColor="yellow" color="yellow" _placeholder={{ color: "gray.400" }} />
+            <FormLabel color="gray.600">Name</FormLabel>
+            <Input placeholder="Enter Your Name.." />
           </FormControl>
           <FormControl>
-            <FormLabel color="yellow">Surename</FormLabel>
-            <Input placeholder="Enter Your Surename.." bg="black" borderColor="yellow" color="yellow" _placeholder={{ color: "gray.400" }} />
+            <FormLabel color="gray.600">Surename</FormLabel>
+            <Input placeholder="Enter Your Surename.." />
           </FormControl>
         </HStack>
         <FormControl>
-          <FormLabel color="yellow">Email</FormLabel>
-          <Input type="email" placeholder="Enter Your Email.." bg="black" borderColor="yellow" color="yellow" _placeholder={{ color: "gray.400" }} />
+          <FormLabel color="gray.600">Email</FormLabel>
+          <Input type="email" placeholder="Enter Your Email.." />
         </FormControl>
         <FormControl>
-          <FormLabel color="yellow">Message</FormLabel>
-          <Textarea placeholder="Enter Your Message.." bg="black" borderColor="yellow" color="yellow" _placeholder={{ color: "gray.400" }} />
+          <FormLabel color="gray.600">Message</FormLabel>
+          <Textarea placeholder="Enter Your Message.." />
         </FormControl>
-        <Checkbox defaultChecked colorScheme="yellow">
-          <Text fontSize="xs" color="yellow">
+        <Checkbox defaultChecked colorScheme="blue">
+          <Text fontSize="xs" color="gray.600">
             I agree with
-            <Box as="span" color="yellow">
+            <Box as="span" color="blue.500">
               {" "}
               Terms & Conditions.
             </Box>
           </Text>
         </Checkbox>
         <Stack>
-          <Button fontSize="sm" bg="yellow" color="black" _hover={{ bg: "yellow.600" }}>Send a Message</Button>
-          <Button fontSize="sm" bg="gray.600" color="yellow" _hover={{ bg: "gray.700" }}>
+          <Button fontSize="sm" colorScheme="blue">Send a Message</Button>
+          <Button fontSize="sm" variant="outline" colorScheme="blue">
             Book a Meeting
           </Button>
         </Stack>

@@ -89,25 +89,25 @@ const TransactionTable = () => {
 
   return (
     <TableContainer>
-      <Table variant="simple" colorScheme="yellow">
+      <Table variant="simple">
         <Thead>
           <Tr>
-            <Th color="yellow">ID</Th>
-            <Th color="yellow">Date & Time</Th>
-            <Th color="yellow">Type</Th>
-            <Th color="yellow">Amount</Th>
-            <Th color="yellow">Status</Th>
+            <Th color="gray.600">ID</Th>
+            <Th color="gray.600">Date & Time</Th>
+            <Th color="gray.600">Type</Th>
+            <Th color="gray.600">Amount</Th>
+            <Th color="gray.600">Status</Th>
           </Tr>
         </Thead>
-        <Tbody color="yellow">
+        <Tbody>
           {tableData.map((data) => (
             <Tr key={data.id}>
-              <Td fontSize="sm" fontWeight="medium" color="yellow">
+              <Td fontSize="sm" fontWeight="medium" color="gray.600">
                 {data.id}
               </Td>
               <Td>
                 <Stack spacing={0}>
-                  <Text fontSize="sm" fontWeight="medium" color="yellow">
+                  <Text fontSize="sm" fontWeight="medium" color="gray.600">
                     {data.date}
                   </Text>
                   <Text fontSize="xs" color="gray.400">
@@ -118,7 +118,7 @@ const TransactionTable = () => {
               <Td>
                 {" "}
                 <Stack spacing={0}>
-                  <Text fontSize="sm" fontWeight="medium" color="yellow">
+                  <Text fontSize="sm" fontWeight="medium" color="gray.600">
                     {data.type.name}
                   </Text>
                   <Text fontSize="xs" color="gray.400">
@@ -126,7 +126,7 @@ const TransactionTable = () => {
                   </Text>
                 </Stack>
               </Td>
-              <Td fontSize="sm" fontWeight="medium" color="yellow">
+              <Td fontSize="sm" fontWeight="medium" color="gray.600">
                 {data.amount}
               </Td>
               <Td fontSize="sm" fontWeight="medium">
